@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <nav className=" flex justify-between bg-third py-3 items-center px-2 select-none font-roboto">
+    <nav className=" flex justify-between bg-opacity-25 py-3 items-center px-2 select-none font-roboto ">
         <a href="">YHA</a>
         <ul className=" flex gap-4 ">
             <li className=""><NavLink to={"/"}>Home</NavLink></li>

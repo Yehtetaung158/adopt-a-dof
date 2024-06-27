@@ -1,5 +1,5 @@
 import React from 'react'
-import { useGetDogsQuery } from './store/service/endpoint/authdog'
+// import { useGetDogsQuery } from './store/service/endpoint/authdog'
 import { Route, Routes } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import PepPage from './pages/PepPage'

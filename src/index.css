@@ -7,7 +7,7 @@
 @tailwind utilities;
 
 .active{
-  @apply  text-blue-700
+  @apply  text-form
 }
 .col{
   @apply max-w-5xl mx-auto
