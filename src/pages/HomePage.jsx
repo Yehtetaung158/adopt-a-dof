@@ -12,8 +12,8 @@ const HomePage = () => {
     console.log(cardData)
   return (
     <div>
-        <div className=' bg-cat-hero bg-cover bg-right h-screen relative'>
-            <div className=' '>
+        <div className='bg-cat-hero bg-cover bg-right h-screen relative'>
+            <div className='h-full'>
                 <div className=' absolute inset-0 flex flex-col left-6 top-1/3'>
                 <div className=' flex flex-col gap-4'>
                 <h1 className=' font-playwrite font-bold text-4xl text-white'>Adopt a New Friend</h1>
