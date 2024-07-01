@@ -7,11 +7,12 @@ import useCatListFetch from '../hook/useCatList';
 // import formimg from ""
 
 const HomePage = () => {
-    const data=useCatListFetch(4);
-    console.log(data?.data)
+    const [data,isError,isLoading]=useCatListFetch(4);
+    const cardData={data,isError,isLoading}
+    console.log(cardData)
   return (
     <div>
-        <div className=' bg-hero1 bg-cover bg-right h-screen relative'>
+        <div className=' bg-cat-hero bg-cover bg-right h-screen relative'>
             <div className=' '>
                 <div className=' absolute inset-0 flex flex-col left-6 top-1/3'>
                 <div className=' flex flex-col gap-4'>
@@ -24,7 +25,7 @@ const HomePage = () => {
         <div className='w-full'>
             <h1 className=' font-roboto font-bold text-3xl my-2 mx-4'>Pets</h1>
             {/* <PetCard data={data}/> */}
-            <PetCard data={data} isHome={true}/>
+            <PetCard cardData={cardData}  isHome={true}/>
         </div>
         <div>
         <h1 className=' font-roboto font-bold text-3xl my-2 mx-4'>Blogs</h1>

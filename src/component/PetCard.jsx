@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import CatCad from "./CatCad";
 
-const PetCard = ({ data: { isLoading, isError, data }, isHome }) => {
+const PetCard = ({
+  cardData: { isLoading, isError, data, moreLoad },
+  isHome,
+}) => {
   const [items, setItems] = useState(data);
-  //   if (isHome && data) {
-  //     const selectedCatImages = data.slice(0, 4);
-  //     setItems(selectedCatImages);
-  //   }
-
   return (
     <div className="container mx-auto px-4 py-4">
       {isLoading ? (
@@ -59,9 +57,12 @@ const PetCard = ({ data: { isLoading, isError, data }, isHome }) => {
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {isHome
-            ? data.slice(0, 4)?.map((i) => <CatCad  key={i.id} i={i} data={data} isHome={isHome}/>)
-            : data?.map((i) => <CatCad  key={i.id} i={i} data={data} />)}
-         
+            ? data
+                ?.slice(0, 4)
+                ?.map((i) => (
+                  <CatCad key={i.id} i={i} data={data} isHome={isHome} />
+                ))
+            : moreLoad?.map((i) => <CatCad key={i.id} i={i} url={i.url} data={data} />)}
         </div>
       )}
     </div>

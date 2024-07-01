@@ -32,8 +32,9 @@ export default {
         form:"#e609e2",
       },
       backgroundImage: {
-        'hero1': "url('https://images.wagwalkingweb.com/media/care/please-adopt-me-choosing-to-adopt-a-puppy-versus-an-adult-dog/please-adopt-me-choosing-to-adopt-a-puppy-versus-an-adult-dog.jpg')",
-        'formimg': "url('https://storage.googleapis.com/pod_public/1300/172611.jpg')"
+        'hero1': "url('/img/please-adopt-me-choosing-to-adopt-a-puppy-versus-an-adult-dog.webp')",
+        'formimg': "url('https://storage.googleapis.com/pod_public/1300/172611.jpg')",
+        'cat-hero':"url('/img/cat-hero.jpg')"
       }
     },
   },
