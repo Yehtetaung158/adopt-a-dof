@@ -29,10 +29,10 @@ const HomePage = () => {
         </div>
         <div>
         <h1 className=' font-roboto font-bold text-3xl my-2 mx-4'>Blogs</h1>
-            <BlogCard/>
+            <BlogCard isHome={true}/>
         </div>
-        <div className=' bg-formimg bg-cover bg-right relative mt-4  bg-gray-400 bg-opacity-25'>
-            <Form/>
+        <div className='bg-cover bg-formimg bg-right relative mt-4  bg-gray-400 bg-opacity-25'>
+            <Form isHome={true}/>
         </div>
         <>
             <Foolter/>

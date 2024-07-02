@@ -7,7 +7,7 @@ const Nav = () => {
         <a href="">YHA</a>
         <ul className=" flex gap-4 ">
             <li className=""><NavLink to={"/"}>Home</NavLink></li>
-            <li><NavLink to={"pep"}>Pep</NavLink></li>
+            <li><NavLink to={"pep"}>Pets</NavLink></li>
             <li><NavLink to={"blog"}>Blog</NavLink></li>
             <li><NavLink to={"contact"}>Contact Us</NavLink></li>
         </ul>

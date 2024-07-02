@@ -1,8 +1,8 @@
 import React from "react";
 
-const Form = () => {
+const Form = ({isHome}) => {
   return (
-    <div className="w-full h-full bg-gray-400 bg-opacity-25 py-6">
+    <div className={`w-full h-full ${isHome && 'bg-gray-50'}  bg-opacity-25 py-6`}>
       <form className="max-w-md mx-auto">
         <div className="relative z-0 w-full mb-5 group">
           <input

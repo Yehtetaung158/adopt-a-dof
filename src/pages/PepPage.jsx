@@ -3,6 +3,7 @@ import PetCard from "../component/PetCard";
 import useCatListFetch from "../hook/useCatList";
 import { useDispatch, useSelector } from "react-redux";
 import { removeItem } from "../store/service/itemSlice";
+import Foolter from "../component/Foolter";
 
 const PepPage = () => {
   const [isOpenDrower, setisOpenDrower] = useState(false);
@@ -124,6 +125,7 @@ const PepPage = () => {
       >
         Load More
       </button>
+      <Foolter/>
     </div>
   );
 };

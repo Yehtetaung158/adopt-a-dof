@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import ImageDownLoad from "./AddFavBtn";
 import AddFavbtn from "./AddFavBtn";
 
-const CatCad = ({ url,i, data, isHome }) => {
+const CatCad = ({ i, data, isHome }) => {
   const nav = useNavigate();
   const seemore = i !== data[data.slice(0, 4).length - 1];
   console.log(isHome);
