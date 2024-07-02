@@ -36,7 +36,7 @@ const Form = () => {
             Email
           </label>
         </div>
-        <div className="grid md:grid-cols-2 md:gap-6">
+        <div className="grid md:gap-6">
           <div className="relative z-0 w-full mb-5 group">
             <input
               type="tel"
@@ -60,8 +60,7 @@ const Form = () => {
                 htmlFor="message"
                 className="block mb-2 text-sm font-medium text-white dark:text-white focus:text-form"
               >
-                
-                Reason to Adopt
+                Message
               </label>
               <textarea
                 id="message"
@@ -77,7 +76,7 @@ const Form = () => {
           type="submit"
           className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-form dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
-          Submit
+          Send
         </button>
       </form>
     </div>
