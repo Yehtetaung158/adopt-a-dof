@@ -4,7 +4,7 @@ import ImageDownLoad from "./AddFavBtn";
 import AddFavbtn from "./AddFavBtn";
 import Imgbtn from "./Imgbtn";
 
-const CatCad = ({ i, data, isHome ,moreLoad}) => {
+const CatCad = ({ i, data, isHome, moreLoad }) => {
   const nav = useNavigate();
   const seemore = i !== data[data.slice(0, 4).length - 1];
   return (
@@ -59,19 +59,24 @@ const CatCad = ({ i, data, isHome ,moreLoad}) => {
       ) : (
         <>
           <div className=" relative">
-          <a href="#">
-            <img
-              className="rounded-t-lg w-full h-48 object-cover"
-              src={i.url}
-              alt={i.name}
-            />
-          </a>
-           <div className="">
-           <AddFavbtn key={i.id} i={i} />
-           </div>
-           <div className=" absolute top-2 right-2">
-            <Imgbtn key={i.id} i={i} id={i.id} moreLoad={moreLoad}/>
-           </div>
+            <a href="#">
+              <img
+                className="rounded-t-lg w-full h-48 object-cover"
+                src={i.url}
+                alt={i.name}
+              />
+            </a>
+            <div className=" flex justify-between items-center">
+              <div>
+                <AddFavbtn key={i.id} i={i} />
+              </div>
+              <div>
+                <AddFavbtn key={i.id} i={i} isCatProfile={true} />
+              </div>
+            </div>
+            <div className=" absolute top-2 right-2">
+              <Imgbtn key={i.id} i={i} id={i.id} moreLoad={moreLoad} />
+            </div>
           </div>
         </>
       )}
