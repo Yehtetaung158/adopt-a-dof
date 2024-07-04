@@ -62,7 +62,7 @@ const PetCard = ({
                 ?.map((i) => (
                   <CatCad key={i.id} i={i} data={data} isHome={isHome} />
                 ))
-            : moreLoad?.map((i) => <CatCad key={i.id} i={i} url={i.url} data={data} />)}
+            : moreLoad?.map((i) => <CatCad key={i.id} i={i} url={i.url} data={data} moreLoad={moreLoad}/>)}
         </div>
       )}
     </div>

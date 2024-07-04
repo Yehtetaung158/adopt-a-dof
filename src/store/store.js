@@ -3,6 +3,7 @@ import { setupListeners } from '@reduxjs/toolkit/query'
 import { ApiService } from './service/Apiservice'
 import itemsReducer from './service/itemSlice'
 import blogsReducer from './service/Blogservise'
+import petServiceReducer from './service/petService'
 
 const saveState = (state) => {
   try {
@@ -33,6 +34,7 @@ export const store = configureStore({
     [ApiService.reducerPath]: ApiService.reducer,
     items: itemsReducer ,
     blogs:blogsReducer,
+    petService:petServiceReducer,
 
   },
   middleware: (getDefaultMiddleware) =>

@@ -23,14 +23,15 @@ const AddFavbtn = ({ i }) => {
   //     }
   //   };
   const dispatch = useDispatch();
-  const downloadhandle = () => {
+  const Addfavhandle = () => {
     dispatch(addItem(i));
+    console.log(i)
   };
 
   return (
     <div>
       <button
-        onClick={downloadhandle} // Pass function reference here
+        onClick={Addfavhandle} // Pass function reference here
         type="button"
         className="flex gap-1 m-1  bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 shadow-lg shadow-lime-500/50 dark:shadow-lg dark:shadow-lime-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
       >

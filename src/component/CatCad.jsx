@@ -2,11 +2,11 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import ImageDownLoad from "./AddFavBtn";
 import AddFavbtn from "./AddFavBtn";
+import Imgbtn from "./Imgbtn";
 
-const CatCad = ({ i, data, isHome }) => {
+const CatCad = ({ i, data, isHome ,moreLoad}) => {
   const nav = useNavigate();
   const seemore = i !== data[data.slice(0, 4).length - 1];
-  console.log(isHome);
   return (
     <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
       {isHome ? (
@@ -58,6 +58,7 @@ const CatCad = ({ i, data, isHome }) => {
         </>
       ) : (
         <>
+          <div className=" relative">
           <a href="#">
             <img
               className="rounded-t-lg w-full h-48 object-cover"
@@ -65,9 +66,13 @@ const CatCad = ({ i, data, isHome }) => {
               alt={i.name}
             />
           </a>
-           <div className=" z-50">
+           <div className="">
            <AddFavbtn key={i.id} i={i} />
            </div>
+           <div className=" absolute top-2 right-2">
+            <Imgbtn key={i.id} i={i} id={i.id} moreLoad={moreLoad}/>
+           </div>
+          </div>
         </>
       )}
     </div>
