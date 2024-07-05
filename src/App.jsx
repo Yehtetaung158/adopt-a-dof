@@ -7,6 +7,7 @@ import BlogPage from './pages/BlogPage'
 import ContactPage from './pages/ContactPage'
 import Notfound from './pages/Notfound'
 import Container from './component/Container'
+import AboutPage from './pages/AboutPage'
 
 const App = () => {
   // const {isError,isLoading,data}=useGetDogsQuery();
@@ -17,6 +18,7 @@ const App = () => {
        <Route path='/' element={<HomePage/>}/>
        <Route path='/pep' element={<PepPage/>}/>
        <Route path='/blog' element={<BlogPage/>}/>
+       <Route path='/about' element={<AboutPage/>}/>
        <Route path='/contact' element={<ContactPage/>}/>
        <Route path='*' element={<Notfound/>}/>
      </Routes>

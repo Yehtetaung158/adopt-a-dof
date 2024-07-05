@@ -5,11 +5,9 @@ import CatProfile from "./CatProfile";
 
 const AddFavbtn = ({ i, isCatProfile }) => {
   const [isProfileOpen,setisProfileOpen]=useState(false)
-  console.log(isProfileOpen)
   const dispatch = useDispatch();
   const Addfavhandle = () => {
     dispatch(addItem(i));
-    console.log(i);
   };
   const profileBntHandle = () => {
     setisProfileOpen(!isProfileOpen)
@@ -59,7 +57,11 @@ const AddFavbtn = ({ i, isCatProfile }) => {
           </>
         )}
       </button>
+      <div 
+        onBlur={profileBntHandle}
+      >
       {isProfileOpen && <CatProfile setisProfileOpen={setisProfileOpen} i={i}/>}
+      </div>
     </div>
   );
 };

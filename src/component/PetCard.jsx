@@ -7,7 +7,7 @@ const PetCard = ({
 }) => {
   const [items, setItems] = useState(data);
   return (
-    <div className="container mx-auto px-4 py-4">
+    <div className="container px-4 mx-auto py-4 w-full">
       {isLoading ? (
         <div
           role="status"
@@ -55,7 +55,8 @@ const PetCard = ({
           </div>
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+       <div className=" flex">
+         <div className="grid grid-cols-1 mx-auto justify-center items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {isHome
             ? data
                 ?.slice(0, 4)
@@ -64,6 +65,7 @@ const PetCard = ({
                 ))
             : moreLoad?.map((i) => <CatCad key={i.id} i={i} url={i.url} data={data} moreLoad={moreLoad}/>)}
         </div>
+       </div>
       )}
     </div>
   );

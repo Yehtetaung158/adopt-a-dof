@@ -21,6 +21,7 @@ const SingleImg = ({ moreLoad }) => {
 
   const outBtnhadler = () => {
     dispatch(toggleSingleimg());
+    console.log("I am out")
   };
 
   return (
@@ -71,6 +72,7 @@ const SingleImg = ({ moreLoad }) => {
         <div className=" w-full flex bg-green-300">
           <button
             onClick={outBtnhadler}
+            onBlur={()=>console.log("first")}
             className="absolute top-2 right-0 z-50 flex items-center justify-center 1/2 px-4 cursor-pointer group focus:outline-none"
           >
             <svg
